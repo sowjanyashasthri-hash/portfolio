@@ -1,0 +1,270 @@
+/* ---------- GLOBAL STYLES ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #121212; /* main dark background */
+  color: #e6e6e6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  background: linear-gradient(90deg, #1f1f1f, #2a2a2a);
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-bottom: 2px solid #444;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ccc;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: #9b59b6; /* violet highlight */
+  text-shadow: 0 0 8px #9b59b6;
+}
+
+/* ---------- HERO SECTION ---------- */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 3rem 1rem;
+  background: #181818;
+  text-align: center;
+  flex: 1;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
+}
+
+.hero img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 1rem;
+  border: 3px solid #9b59b6;
+  box-shadow: 0 0 15px rgba(155, 89, 182, 0.4);
+}
+
+.hero-text {
+  max-width: 500px;
+  margin: 1rem;
+}
+
+.hero-text h2 {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.hero-text p {
+  font-size: 1rem;
+  color: #ccc;
+  margin: 1rem 0;
+}
+
+.btn {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.7rem 1.4rem;
+  border-radius: 25px;
+  background: #9b59b6;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: #bb86fc;
+  box-shadow: 0 0 10px #bb86fc;
+  transform: scale(1.05);
+}
+
+/* ---------- RESUME PAGE ---------- */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  flex: 1;
+}
+
+.card {
+  background: #1f1f1f;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(255,255,255,0.05);
+  transition: 0.3s;
+  border: 1px solid #2f2f2f;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(155, 89, 182, 0.3);
+}
+
+.card h2 {
+  color: #bb86fc;
+  margin-bottom: 1rem;
+}
+
+/* Skills progress bar */
+.skills li {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+.skills span {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.3rem;
+  color: #e6e6e6;
+}
+
+.progress {
+  background: #333;
+  border-radius: 10px;
+  height: 8px;
+  overflow: hidden;
+}
+
+.progress div {
+  background: #bb86fc;
+  height: 8px;
+  border-radius: 10px;
+}
+
+/* ---------- BIODATA PAGE ---------- */
+.biodata-card {
+  max-width: 700px;
+  background: #1f1f1f;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(255,255,255,0.05);
+  border: 1px solid #2f2f2f;
+  flex: 1;
+}
+
+.biodata-card h2 {
+  color: #bb86fc;
+  text-align: center;
+}
+
+.biodata-card p {
+  color: #aaa;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.biodata-card table {
+  width: 100%;
+  margin-top: 1rem;
+  border-collapse: collapse;
+}
+
+.biodata-card th {
+  text-align: left;
+  padding: 0.5rem;
+  width: 40%;
+  color: #bbb;
+}
+
+.biodata-card td {
+  padding: 0.5rem;
+  color: #e6e6e6;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  background: #1a1a1a;
+  color: #ccc;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: auto;
+  border-top: 2px solid #2f2f2f;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  color: #aaa;
+}
+
+footer p::after {
+  content: " 💜";
+  color: #bb86fc;
+}
+
+/* ---------- SCROLLBAR ---------- */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+::-webkit-scrollbar-thumb {
+  background: #9b59b6;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #bb86fc;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .biodata-card {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+}
